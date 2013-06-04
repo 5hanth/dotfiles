@@ -18,8 +18,7 @@ PATH=$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/1.9.1/bin/ # Add RVM to PATH for scrip
 
 ### alias ##
 alias s='su -c "shutdown now"'
-alias ls='ls --color=auto'
-alias ls='ls -sh'
+alias ls='ls --color=auto -sh'
 alias r='pkill chromium && killall chromium && chromium &' # Chromium sucks with AwesomeWM
 
 ### git ##
