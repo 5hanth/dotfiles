@@ -26,4 +26,5 @@ alias r='pkill chromium && killall chromium && chromium &' # Chromium sucks with
 git config --global user.email "sh4nth@gmail.com"
 git config --global credential.helper 'cache --timeout=36000'
 git config --global user.name "5hanth"
-
+alias update="git push origin master"
+alias ok="git commit -a"
