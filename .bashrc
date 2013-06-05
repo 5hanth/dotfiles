@@ -8,7 +8,8 @@
 ### PS1 ##
 # PS1="\[\033[1;34m\]\@ \[\033[1;32m\]\w\[\033[0m\]\$ "
 # PS1="\n ***** \@ :: \u on $(date +"%A, %d %B, %Y") :: \w ***** #\n *\n ******** > "
-PS1="\n  /==== \u :: $(date +"%A, %d %B, %Y ") === [ \@ ] $ \n @\n  \====( \w )===> "
+export today=$(date +"%A, %d %B, %Y ")
+PS1="\n  /==== \u :: $today === [ \@ ] $ \n @\n  \====( \w )===> "
 
 ### vars ##
 export GIT="https://github.com/5hanth"
