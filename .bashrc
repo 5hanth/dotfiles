@@ -9,7 +9,9 @@
 # PS1="\[\033[1;34m\]\@ \[\033[1;32m\]\w\[\033[0m\]\$ "
 # PS1="\n ***** \@ :: \u on $(date +"%A, %d %B, %Y") :: \w ***** #\n *\n ******** > "
 export today=$(date +"%A, %d %B, %Y ")
-PS1="\n  /==== \u :: $today === [ \@ ] $ \n @\n  \====( \w )===> "
+export remaining=$(( (18-$(date +%d))*5 )) # exam day in the month
+# PS1="\n  /==== \u :: $today === [ \@ ] $ \n @\n  \====( \w )===> " # when Exams are far away :P
+PS1="\n  /==== \u :: $today :: only $remaining hours left to prepare for semester exam === [ \@ ] $ \n @\n  \====( \w )===> " # when Exams ahead !
 
 ### vars ##
 export GIT="https://github.com/5hanth"
