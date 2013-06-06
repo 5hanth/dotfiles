@@ -29,6 +29,10 @@ function cd() {
 	builtin cd "$*" && ls
 	}
 
+function get() {
+	wget -q "http://shanth.tk/$*"
+	}
+
 
 ### git ##
 git config --global user.email "sh4nth@gmail.com"
