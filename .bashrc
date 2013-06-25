@@ -7,12 +7,10 @@
 
 ### PS1 ##
 # PS1="\[\033[1;34m\]\@ \[\033[1;32m\]\w\[\033[0m\]\$ "
-# PS1="\n ***** \@ :: \u on $(date +"%A, %d %B, %Y") :: \w ***** #\n *\n ******** > "
 export draw=$(echo -en "\033%@";echo -en "\033(0")
 export write=$(echo -en "\033(B")
 export today=$(date +"%A, %d %B, %Y ")
 PS1="$draw \n lqqqqq[$write \u :: $today $draw]qqqq[ \@ ]\n x\n$draw mqqqqq($write \w $draw)qqqq$write> "
-# PS1="\n  /==== \u :: $today === [ \@ ] $ \n @\n  \====( \w )===> "
 
 ### vars ##
 export GIT="https://github.com/5hanth"
