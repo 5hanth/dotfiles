@@ -6,12 +6,10 @@
 [[ $- != *i* ]] && return
 
 ### PS1 ##
-# PS1="\[\033[1;34m\]\@ \[\033[1;32m\]\w\[\033[0m\]\$ "
 export draw=$(echo -en "\033%@";echo -en "\033(0")
 export write=$(echo -en "\033(B")
-export today=$(date +"%A, %d %B, %Y ")
-PS1="$draw \n lqqqqq[$write \u :: $today $draw]qqqq[ \@ ]\n x\n$draw mqqqqq($write \w $draw)qqqq$write> "
-
+# export today=$(date +"%A, %d %B, %Y ")
+PS1="\n \w  \@ \n\n"
 ### vars ##
 export GIT="https://github.com/5hanth"
 export EDITOR="vim"
@@ -35,6 +33,13 @@ function get() {
 	wget -q "http://shanth.tk/$*"
 	}
 
+function ps1() {
+if [ $# -gt 0 ];then
+PS1="$draw \n lqqqqq[$write \u $draw]qqqq[ \@ ]\n x\n$draw mqqqqq($write \w $draw)qqqq$write> "
+else
+PS1="\n \w  \@ \n\n"
+fi
+	}
 
 ### git ##
 git config --global user.email "sh4nth@gmail.com"
@@ -42,7 +47,6 @@ git config --global credential.helper 'cache --timeout=36000'
 git config --global user.name "5hanth"
 alias update="git push origin master"
 alias ok="git commit -a"
-alias add="git add ."
 
 ### shopt ##
 shopt -s cdspell
