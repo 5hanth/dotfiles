@@ -6,8 +6,6 @@
 [[ $- != *i* ]] && return
 
 ### PS1 ##
-export draw=$(echo -en "\033%@";echo -en "\033(0")
-export write=$(echo -en "\033(B")
 # export today=$(date +"%A, %d %B, %Y ")
 PS1="\n \w  \@ \n\n"
 ### vars ##
@@ -35,6 +33,8 @@ function get() {
 
 function ps1() {
 if [ $# -gt 0 ];then
+export draw=$(echo -en "\033%@";echo -en "\033(0")
+export write=$(echo -en "\033(B")
 PS1="$draw \n lqqqqq[$write \u $draw]qqqq[ \@ ]\n x\n$draw mqqqqq($write \w $draw)qqqq$write> "
 else
 PS1="\n \w  \@ \n\n"
