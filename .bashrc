@@ -17,7 +17,7 @@ PATH=$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/1.9.1/bin/ # Add RVM to PATH for scrip
 alias s='su -c "shutdown now"'
 alias r='su -c "systemctl reboot"'
 alias l='ls --color=auto -Sssh'
-alias l='ls --color=auto -Sssha'
+alias ll='ls --color=auto -Sssha'
 alias .='cd ~/'
 alias q='screen'
 alias x='exit'
