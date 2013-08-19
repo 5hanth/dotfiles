@@ -17,5 +17,4 @@ fi
 # exec awesome 
 
 chromium &
-pidgin &
-exec $1 
+exec dwm
