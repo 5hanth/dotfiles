@@ -23,6 +23,9 @@ alias q='screen'
 alias x='exit'
 alias c='xinit /usr/bin/chromium -- :1'
 
+### multimedia ##
+function movie() { su -c "mplayer -fs -quiet -zoom -x 1366 -y 768 -vo fbdev2 '$1'"; }
+
 ### fun ##
 alias matrix='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
 
