@@ -3,7 +3,7 @@
 #
 
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+ [[ $- != *i* ]] && return
 
 ### PS1 ##
 PS1="\n \w  \@ \n\n"
@@ -25,6 +25,8 @@ alias c='xinit /usr/bin/chromium -- :1'
 ### multimedia ##
 function movie() { su -c "mplayer -fs -quiet -zoom -x 1366 -y 768 -vo fbdev2 '$1'"; }
 alias record='su -c "ffmpeg -f fbdev -i /dev/fb0 -r 24 streamcast.avi"'
+alias rec='recordmydesktop --no-sound --fps 15 --on-the-fly-encoding --stop-shortcut Control+s'
+
 
 ### fun ##
 alias matrix='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
