@@ -3,6 +3,8 @@ set scrolloff=9999
 set nu
 set autoindent
 set smartindent
+set is 
+
 iabbr sk ShanthaKumar
 map <F2> :NERDTreeToggle<CR>
 map <F3> :tabnew<CR>

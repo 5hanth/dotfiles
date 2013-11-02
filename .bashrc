@@ -25,7 +25,7 @@ alias c='xinit /usr/bin/chromium -- :1'
 ### multimedia ##
 function movie() { su -c "mplayer -fs -quiet -zoom -x 1366 -y 768 -vo fbdev2 '$1'"; }
 alias record='su -c "ffmpeg -f fbdev -i /dev/fb0 -r 24 streamcast.avi"'
-alias rec='recordmydesktop --no-sound --fps 15 --on-the-fly-encoding --stop-shortcut Control+s'
+alias rec='recordmydesktop --no-sound --fps 15 --on-the-fly-encoding --stop-shortcut Control+s &'
 
 
 ### fun ##
