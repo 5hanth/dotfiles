@@ -9,8 +9,6 @@ set winname class
 
 bind q quit
 bind Escape abort
-bind p rpwsp
-bind n rpwsn
 
 definekey top s-k focusup
 definekey top s-j focusdown
