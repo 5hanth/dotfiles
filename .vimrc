@@ -5,13 +5,24 @@ set autoindent
 set smartindent
 set is 
 
-iabbr sk ShanthaKumar
-map <F2> :NERDTreeToggle<CR>
-map <F3> :tabnew<CR>
-map <F4> :tabclose<CR>
-map <F5> :x<CR>
-map <F8> :tabN<CR>
-map <F9> :tabn<CR>
-map <F10> :w<CR>
-map <F11> :w 
-map <F12> :q!<CR>
+let mapleader=','
+iabbr sk Shanthakumar
+map t :NERDTreeToggle<CR>
+map <leader>n :tabnew<CR>
+map <leader>c :tabclose<CR>
+map <leader>x :x<CR>
+map <leader>, :tabN<CR>
+map <leader>. :tabn<CR>
+map <leader>w :w<CR>
+map <leader>W :w 
+map <leader>q :q!<CR>
+map <leader>e :e 
+map <M-Space> <Escape>
+map <space> <C-w>
+map ; :
+
+nnoremap <Left> :vertical resize +5<CR>
+nnoremap <Right> :vertical resize -5<CR>
+nnoremap <Up> :resize +5<CR>
+nnoremap <Down> :resize -5<CR>
+
