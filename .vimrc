@@ -4,6 +4,7 @@ set nu
 set autoindent
 set smartindent
 set is 
+set nowrap
 
 let mapleader=','
 iabbr sk Shanthakumar
@@ -17,7 +18,7 @@ map <leader>w :w<CR>
 map <leader>W :w 
 map <leader>q :q!<CR>
 map <leader>e :e 
-map <M-Space> <Escape>
+map <C-c> <Escape>
 map <space> <C-w>
 map ; :
 

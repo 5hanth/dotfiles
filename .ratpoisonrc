@@ -1,5 +1,5 @@
 escape grave
-exec rpws init 4 -k
+exec rpws init 3 -k
 
 set border 0
 set padding 0 0 0 0
@@ -9,7 +9,7 @@ set framesels htnsaoeudi
 set winname class
 set bgcolor black
 set fgcolor green
-
+msgwait 20
 
 bind q quit
 bind Escape abort
@@ -25,6 +25,7 @@ definekey top s-H exchangeleft
 definekey top s-L exchangeright
 definekey top s-minus fselect
 definekey top s-a swap
+definekey top s-d dedicate
 
 definekey top s-x remove
 definekey top s-s hsplit
@@ -34,7 +35,10 @@ definekey top s-V vsplit 2/3
 
 definekey top s-period rpwsn
 definekey top s-comma rpwsp
+definekey top s-m gmove
 
+definekey top s-Tab other
+definekey top s-e select -
 definekey top s-c delete
 definekey top s-n next
 definekey top s-p prev
@@ -49,12 +53,15 @@ definekey top s-slash      help root
 definekey top s-question   help top
 
 definekey top s-g exec x-www-browser
+definekey top s-b exec dwb
 definekey top s-t exec x-terminal-emulator
+definekey top s-q exec scrot $(ratpoison -c 'prompt Enter Screenshot Name :').png
+
 bind F1 exec ratpoison -c "setenv fs1 `ratpoison -c 'fdump'`"
-bind F2 exec ratpoison -c "setenv fs2 `ratpoison -c 'fdump'`"
-bind F3 exec ratpoison -c "frestore `ratpoison -c 'getenv fs1'`"
+bind F2 exec ratpoison -c "frestore `ratpoison -c 'getenv fs1'`"
+bind F3 exec ratpoison -c "setenv fs2 `ratpoison -c 'fdump'`"
 bind F4 exec ratpoison -c "frestore `ratpoison -c 'getenv fs2'`"
 
 definekey top s-space exec dmenu_run -sb black -sf yellow -nb black -nf green
 
-echo "Welcome back !"
+source .rat_startup

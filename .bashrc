@@ -12,6 +12,8 @@ export GIT="https://github.com/5hanth"
 export EDITOR="vim"
 PATH=$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/1.9.1/bin/ # Add RVM to PATH for scripting
 
+set -o vi
+
 ### alias ##
 alias s='su -c "shutdown now"'
 alias r='su -c "systemctl reboot"'
@@ -21,6 +23,7 @@ alias .='cd ~/'
 alias q='screen'
 alias x='exit'
 alias c='xinit /usr/bin/chromium -- :1'
+alias v='vim'
 
 ### multimedia ##
 function movie() { su -c "mplayer -fs -quiet -zoom -x 1366 -y 768 -vo fbdev2 '$1'"; }
