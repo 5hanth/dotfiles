@@ -34,7 +34,9 @@ definekey top s-S hsplit 43/50
 definekey top s-V vsplit 2/3
 
 definekey top s-period rpwsn
+definekey top C-Right rpwsn 
 definekey top s-comma rpwsp
+definekey top C-Left rpwsp
 definekey top s-m gmove
 
 definekey top s-Tab other

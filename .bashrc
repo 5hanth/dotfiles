@@ -24,6 +24,7 @@ alias q='screen'
 alias x='exit'
 alias c='xinit /usr/bin/chromium -- :1'
 alias v='vim'
+alias vs='vim -S Session.vim'
 
 ### multimedia ##
 function movie() { su -c "mplayer -fs -quiet -zoom -x 1366 -y 768 -vo fbdev2 '$1'"; }

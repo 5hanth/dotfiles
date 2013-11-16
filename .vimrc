@@ -5,23 +5,32 @@ set autoindent
 set smartindent
 set is 
 set nowrap
+set hidden
+set wildmenu
+set wildmode=longest:full,full
+set ruler
+set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+
 
 let mapleader=','
-iabbr sk Shanthakumar
-map t :NERDTreeToggle<CR>
-map <leader>n :tabnew<CR>
-map <leader>c :tabclose<CR>
-map <leader>x :x<CR>
-map <leader>, :tabN<CR>
-map <leader>. :tabn<CR>
-map <leader>w :w<CR>
-map <leader>W :w 
-map <leader>q :q!<CR>
-map <leader>e :e 
-map <C-c> <Escape>
-map <space> <C-w>
-map ; :
+nnoremap t :NERDTreeToggle<CR>
+nnoremap <leader>n :tabnew<CR>
+nnoremap <leader>c :tabclose<CR>
+nnoremap <leader>x :x<CR>
+nnoremap <leader>, :tabN<CR>
+nnoremap <leader>. :tabn<CR>
+nnoremap <leader>w :w<CR>
+nnoremap <leader>q :q!<CR>
+nnoremap <leader>e :e 
+nnoremap <leader>s :buffers<CR>:b<Space>
+nnoremap <leader>d :buffers<CR>:bw<Space>
+nnoremap <leader>m :mks!<CR>:xa<CR>
+nnoremap <leader>a :vertical ba<CR>
 
+nnoremap <C-c> <Escape>
+nnoremap <space> <C-w>
+nnoremap <Space><Space> <c-w><c-w>
+nnoremap ; :
 nnoremap <Left> :vertical resize +5<CR>
 nnoremap <Right> :vertical resize -5<CR>
 nnoremap <Up> :resize +5<CR>
