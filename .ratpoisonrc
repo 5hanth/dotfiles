@@ -1,4 +1,4 @@
-escape grave
+escape KP_Enter
 exec rpws init 3 -a
 
 set border 0
@@ -25,13 +25,13 @@ definekey top KP_Right focusright
 definekey top s-o only
 definekey top KP_End only
 definekey top s-K exchangeup
-definekey top KP_8 exchangeup
+bind KP_UP exchangeup
 definekey top s-J exchangedown
-definekey top KP_2 exchangedown
+bind KP_Down exchangedown
 definekey top s-H exchangeleft
-definekey top KP_4 exchangeleft
+bind KP_Left exchangeleft
 definekey top s-L exchangeright
-definekey top KP_6 exchangeright
+bind KP_Right exchangeright
 definekey top s-minus fselect
 definekey top s-a swap
 definekey top s-d dedicate
@@ -50,17 +50,17 @@ definekey top s-comma rpwsn
 definekey top s-period rpwsp
 definekey top KP_Home rpwsp
 definekey top s-m gmove
-definekey top KP_Enter gmove
+bind KP_Enter gmove
 
 definekey top s-Tab other
 definekey top s-e select -
-definekey top KP_1 select -
+bind KP_End select -
 definekey top s-c delete
-definekey top KP_3 delete
+bind KP_Next delete
 definekey top s-n next
 definekey top KP_Begin next
 definekey top s-p prev
-definekey top KP_5 prev
+bind KP_Begin prev
 definekey top s-r resize
 definekey top KP_Divide resize -20 0
 definekey top KP_Multiply resize +20 0
@@ -69,7 +69,7 @@ definekey top KP_Add resize 0 +20
 definekey top s-u undo
 definekey top s-U redo
 definekey top s-w windows
-definekey top S-KP_Enter windows
+bind space windows
 
 definekey top s-z time
 definekey top s-semicolon  colon
@@ -79,7 +79,7 @@ definekey top s-question   help top
 definekey top s-g exec x-www-browser
 definekey top s-b exec dwb
 definekey top s-t exec x-terminal-emulator
-definekey top s-q exec scrot $(ratpoison -c 'prompt Enter Screenshot Name :').png
+definekey top Print exec scrot $(ratpoison -c 'prompt Enter Screenshot Name :').png
 
 bind F1 exec ratpoison -c "setenv fs1 `ratpoison -c 'fdump'`"
 bind F2 exec ratpoison -c "frestore `ratpoison -c 'getenv fs1'`"
