@@ -16,6 +16,7 @@ set -o vi
 
 ### alias ##
 alias s='su -c "shutdown now"'
+alias sp='xsel  | espeak  -ven-us+f3 -s 175' # speak X selection
 alias r='su -c "systemctl reboot"'
 alias l='ls --color=auto -Sssh'
 alias ll='ls --color=auto -Sssha'

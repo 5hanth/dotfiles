@@ -10,6 +10,7 @@ set wildmenu
 set wildmode=longest:full,full
 set ruler
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
+colorscheme evening
 
 
 let mapleader=','
