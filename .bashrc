@@ -10,7 +10,7 @@ PS1="\n \w  \@ \n\n"
 ### vars ##
 export GIT="https://github.com/5hanth"
 export EDITOR="vim"
-PATH=$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/1.9.1/bin/ # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/1.9.1/bin/:$HOME/.cabal/bin # Add RVM to PATH for scripting
 
 set -o vi
 
@@ -37,6 +37,7 @@ alias rec='recordmydesktop --no-sound --fps 15 --on-the-fly-encoding --stop-shor
 alias matrix='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
 
 ### functions ##
+function g() { gcc -std=c99 $* && ./a.out; }
 function suc { su -c "$*"; }
 function cd() {
 	builtin cd "$*" && ls

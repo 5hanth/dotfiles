@@ -8,6 +8,10 @@
 ! keysym 8 = 8 asterisk
 ! keysym 9 = 9 parenleft
 ! keysym 0 = 0 parenright
+keysym Tab = Escape
+keysym Escape = Tab
+keysym Caps_Lock = Control_L
+keysym Control_L = Caps_Lock
 keysym bracketleft = minus underscore
 keysym bracketright = equal plus
 keysym apostrophe = q Q
