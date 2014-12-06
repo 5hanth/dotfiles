@@ -1,0 +1,5 @@
+#!/usr/bin/sh
+
+wpa_supplicant -B -iwlp7s0 -c /etc/wpa_supplicant/wpa_supplicant.conf
+sleep 3
+dhcpcd wlp7s0

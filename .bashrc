@@ -5,12 +5,13 @@
 # If not running interactively, don't do anything
  [[ $- != *i* ]] && return
 
-### PS1 ##
-PS1="\n \w  \@ \n\n"
 ### vars ##
+export PS1="\n \w  \@ \n\n"
 export GIT="https://github.com/5hanth"
 export EDITOR="vim"
-PATH=$PATH:$HOME/.rvm/bin:$HOME/.gem/ruby/1.9.1/bin/:$HOME/.cabal/bin # Add RVM to PATH for scripting
+export PATH=$HOME/.cabal/bin:$PATH 
+export LANG="en_US.utf-8"
+
 
 set -o vi
 
@@ -23,9 +24,10 @@ alias ll='ls --color=auto -Sssha'
 alias .='cd ~/'
 alias q='screen'
 alias x='exit'
-alias c='xinit /usr/bin/chromium -- :1'
 alias v='vim'
 alias vs='vim -S Session.vim'
+alias a='fg'
+alias j='jobs'
 
 ### multimedia ##
 function movie() { su -c "mplayer -fs -quiet -zoom -x 1366 -y 768 -vo fbdev2 '$1'"; }
@@ -37,7 +39,6 @@ alias rec='recordmydesktop --no-sound --fps 15 --on-the-fly-encoding --stop-shor
 alias matrix='echo -ne "\e[32m" ; while true ; do echo -ne "\e[$(($RANDOM % 2 + 1))m" ; tr -c "[:print:]" " " < /dev/urandom | dd count=1 bs=50 2> /dev/null ; done'
 
 ### functions ##
-function g() { gcc -std=c99 $* && ./a.out; }
 function suc { su -c "$*"; }
 function cd() {
 	builtin cd "$*" && ls

@@ -11,7 +11,6 @@ set wildmenu
 set wildmode=longest:full,full
 set ruler
 set rulerformat=%55(%{strftime('%a\ %b\ %e\ %I:%M\ %p')}\ %5l,%-6(%c%V%)\ %P%)
-colorscheme evening
 filetype indent on
 filetype plugin on
 set omnifunc=syntaxcomplete#Complete
@@ -19,6 +18,11 @@ set omnifunc=syntaxcomplete#Complete
 
 let mapleader=','
 nnoremap - :NERDTreeToggle<CR>
+let g:NERDTreeQuitOnOpen = 1
+let g:NERDTreeWinPos = "right"
+let NERDTreeMinimalUI=1
+let NERDTreeDirArrows=1
+
 nnoremap <leader>n :bnext<CR>
 nnoremap <leader>p :bprevious<CR>
 nnoremap <leader>c :tabclose<CR>
@@ -26,6 +30,7 @@ nnoremap <leader>x :x<CR>
 nnoremap <leader>. :tabn<CR>
 nnoremap <leader>w :w<CR>
 nnoremap ' :w<CR>
+nnoremap <leader>- :w<CR><C-z>
 nnoremap <leader>q :q!<CR>
 nnoremap <leader>e :vsplit  
 nnoremap <leader>h :nohl<CR>  
