@@ -11,6 +11,7 @@ export GIT="https://github.com/5hanth"
 export EDITOR="vim"
 export PATH=$HOME/.cabal/bin:$PATH 
 export LANG="en_US.utf-8"
+export LEIN_ROOT="true"
 
 
 set -o vi
@@ -28,6 +29,11 @@ alias v='vim'
 alias vs='vim -S Session.vim'
 alias a='fg'
 alias j='jobs'
+
+## GHC ##
+alias ghc-sandbox="ghc -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
+alias ghci-sandbox="ghci -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
+alias runhaskell-sandbox="runhaskell -no-user-package-db -package-db .cabal-sandbox/*-packages.conf.d"
 
 ### multimedia ##
 function movie() { su -c "mplayer -fs -quiet -zoom -x 1366 -y 768 -vo fbdev2 '$1'"; }

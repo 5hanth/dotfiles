@@ -50,3 +50,4 @@ nnoremap <Down> :resize -5<CR>
 
 inoremap hh <Esc> 
 nnoremap <leader>; q:
+

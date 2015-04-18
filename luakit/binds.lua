@@ -158,10 +158,10 @@ add_binds("normal", {
     key({}, "k", "Scroll document up.",
         function (w) w:scroll{ yrel = -scroll_step } end),
 
-    key({}, "h", "Scroll document left.",
+    key({}, "H", "Scroll document left.",
         function (w) w:scroll{ xrel = -scroll_step } end),
 
-    key({}, "l", "Scroll document right.",
+    key({}, "S", "Scroll document right.",
         function (w) w:scroll{ xrel =  scroll_step } end),
 
     key({}, "Down", "Scroll document down.",
@@ -182,7 +182,7 @@ add_binds("normal", {
     key({}, "$", "Scroll to the absolute right of the document.",
         function (w) w:scroll{ x = -1 } end),
 
-    key({}, "0", "Scroll to the absolute left of the document.",
+    key({}, ")", "Scroll to the absolute left of the document.",
         function (w, m)
             if not m.count then w:scroll{ y = 0 } else return false end
         end),
@@ -322,10 +322,14 @@ add_binds("normal", {
         function (w) w:enter_cmd(":winopen " .. (w.view.uri or "")) end),
 
     -- History
-    key({}, "H", "Go back in the browser history `[count=1]` items.",
+    key({}, ",", "Go back in the browser history `[count=1]` items.",
+        function (w, m) w:back(m.count) end),
+    key({}, "9", "Go back in the browser history `[count=1]` items.",
         function (w, m) w:back(m.count) end),
 
-    key({}, "L", "Go forward in the browser history `[count=1]` times.",
+    key({}, ".", "Go forward in the browser history `[count=1]` times.",
+        function (w, m) w:forward(m.count) end),
+    key({}, "0", "Go forward in the browser history `[count=1]` times.",
         function (w, m) w:forward(m.count) end),
 
     key({}, "XF86Back", "Go back in the browser history.",
@@ -340,6 +344,11 @@ add_binds("normal", {
     key({"Control"}, "i", "Go forward in the browser history.",
         function (w, m) w:forward(m.count) end),
 
+    key({}, "s", "Go to Next tab",
+        function (w) w:next_tab() end),
+    key({}, "h", "Go to previous tab",
+        function (w) w:prev_tab() end),
+	
     -- Tab
     key({"Control"}, "Page_Up", "Go to previous tab.",
         function (w) w:prev_tab() end),

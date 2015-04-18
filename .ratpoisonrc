@@ -77,7 +77,7 @@ definekey top s-slash      help root
 definekey top s-question   help top
 
 definekey top s-g exec x-www-browser
-definekey top s-b exec dwb
+definekey top s-b exec luakit
 definekey top s-t exec x-terminal-emulator
 definekey top Print exec scrot $(ratpoison -c 'prompt Enter Screenshot Name :').png
 
